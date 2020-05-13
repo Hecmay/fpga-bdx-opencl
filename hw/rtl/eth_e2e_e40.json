@@ -1,0 +1,32 @@
+{
+   "version": 1,
+   "afu-image": {
+      "power": 0,
+      "afu-top-interface":
+         {
+            "class": "ccip_std_afu",
+            "module-ports" :
+               [
+                  {
+                     "class": "cci-p",
+                     "params":
+                        {
+                           "clock": "hssi.f2a_prmgmt_ctrl_clk"
+                        }
+                  },
+                  {
+                     "class": "hssi",
+                     "interface": "raw_pr"
+                  }
+               ]
+         },
+      "accelerator-clusters":
+         [
+            {
+               "name": "eth_e2e_e40",
+               "total-contexts": 1,
+               "accelerator-type-uuid": "26b40788-034b-4389-b3c1-51a1b62ed6c2"
+            }
+         ]
+   }
+}
