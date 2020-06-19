@@ -311,9 +311,9 @@ fpga_result fpgaHssiSendPacket(fpga_hssi_handle hssi,
 	wr_data.eth_traf.eth_traff_wr = 1;
 	wr_data.eth_traf.eth_traff_addr = 0x1;
 	prMgmtWrite(hssi->dfl, PR_MGMT_ETH_CTRL, wr_data);
+	wr_data.eth_traff_wdata = num_packets;
 
 	// number of packets
-	wr_data.eth_traff_wdata = num_packets;
 	prMgmtWrite(hssi->dfl, PR_MGMT_ETH_WR_DATA, wr_data);
 
 	wr_data.reg = 0;
